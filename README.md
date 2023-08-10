@@ -16,4 +16,6 @@ This a project of games store that sells digital version of games. It was done 2
 
 #Features lost to time
 - user sided profile picture set up
+- favicon setup
+- site title
 - some other stuff that i forgot :skull:
