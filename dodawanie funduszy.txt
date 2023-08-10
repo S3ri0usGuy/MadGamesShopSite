@@ -1,0 +1,18 @@
+1. Pobierz dane o kwocie któr¹ u¿ytkownik chce do³adowaæ portfel
+Z forma najlepiej metod¹ post zostan¹ przes³ane dane o do³adowaniu konta
+$_POST['doladowanie']
+
+2. Pobierz dane z portfela z tabeli u¿ytkownika
+SELECT user_wallet FROM users WHERE UserID = $_SESSION['userID']
+
+$wallet = $row['user_wallet']
+
+3. dodaj do³adowanie do konta
+$doladowanie = $_POST['doladowanie']
+$wallet = $wallet + $doladowanie
+
+UPDATE users SET user_wallet = $wallet WHERE UserID = $_SESSION['userID']
+
+>to prawdopodobnie najlepiej bêdzie zrobiæ w jednej funkcji max 2
+>to mo¿e przynajmniej paysafecarda czy coœ /j
+> trzeba bêdzie pokombinowaæ z postem i ¿eby zdezynfekowaæ dane(¿eby nie by³o sql injection attack)

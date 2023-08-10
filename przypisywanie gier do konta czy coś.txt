@@ -1,0 +1,42 @@
+nastêpuj¹ce kroki bêd¹ wykonywane za pomoc¹ pliku functions_inc.php i assign_inc.php
+wykorzystuje sesje poniewa¿ z za³o¿enia u¿ytkownik kupuje produkt dla siebie
+
+1 sprawdŸ czy u¿ytkownik posiada ju¿ dan¹ gre
+SELECT * FROM inventory INNER JOIN games ON inventory.game_id = games.game_id WHERE inventory.userID = $_session['userID'] AND inventory.game_id = $_get['id']
+
+tutaj dane z get których nazwe prawdopodobnie bêdzie trzeba zmieniæ gdy¿ mo¿e to powodowaæ konflikt z user ale nie wiem
+
+nastêpnie sprawdzam czy zapytanie zwraca rzêdy bo jeœli zwraca to znaczy ¿e u¿ytkownik ma dany produkt na koncie
+numrows(zapytanie)
+
+2 przygotowywuje dane do wygenerowania rachunku
+$t=time();
+$date = date("Y-m-d",$t);
+$game_id = $_get['id'] // bêdê musia³ czymœ zast¹piæ _GET nie mam pojêcia czym
+
+3 nastêpuje generuje to rachunek z wczeœniej podanych danych
+INSERT INTO billing (bill_date, game_id, bill_price, bill_disc) VALUES '$date','$game_id','/*cena*/',''
+
+bill discount bêde musia³ byæ wprowadzony czy jest czyli to bêdzie prawdopodobnie wartoœæ zapisana na stronie danej gry
+tak samo wartoœæ bill_price bo narazie nie wiem z k¹d j¹ wzi¹æ
+
+4zapisanie id rachunku(bill_id) który by³ ostatnio u¿yty/zmodyfikowany
+$recentBill = SELECT MAX(bill_id) FROM billing 
+sprawdŸ czy wipisuje tylko jeden ¿¹d za pomoca numrows() // tak wiem ¿e to ma zwracaæ tylko jeden ¿¹d ale wrazie czego
+
+najliepiej ¿eby punkt 3 i 4 by³y wykonane zaraz po sobie
+$recentBillAdd = $row['bill_id']
+
+5 przypisanie gry do konta
+SELECT bill_id, game_id FROM billing WHERE bill_id = $recentBillAdd
+$insertBill = $row['bill_id']
+$insertGame = $row['game_id']
+
+INSERT INTO inventory (userID,bill_id,game_id) VALUES '$_SESSION['userID']', '$insertBill','$insertGame'
+
+gry bêd¹ sie wyœwietla³y na profilu u¿ytkownika
+
+>nastêpny przystanek zakupienie gier przez u¿ytkownika
+
+
+

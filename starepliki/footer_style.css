@@ -1,0 +1,32 @@
+
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: darkorange;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: flex-end;
+}/* linijka 6 i 7 do edycji w zależności od tego jaką stopkę będziemy potrzebowali i jeśli ma się przemieszczać*/
+.ftr_obj{
+    background-color: darkgreen;
+    display: flex;
+    flex-direction: column;
+}
+ul {
+    list-style-type:none ;
+}
+.f_p{
+    display: flex;
+    align-self:center ;
+}
+/*#ck{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    background-color: darkorange;
+}*/

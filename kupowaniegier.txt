@@ -1,0 +1,21 @@
+U¿ytkownik bêdzie mia³ komórke w tabei w kolumnie portfel gdzie bêd¹ zapisane jego œrodki
+
+1. sprawdŸ czy u¿ytkownik ma wystarczaj¹co œrodków w portfelu ¿eby dokonaæ zakupu
+SELECT user_wallet FROM users WHERE UserID = $_SESSION['userID']
+$wallet = $row[user_wallet];
+SELECT game_price FROM games WHERE game_id = $_GET['id']
+$gamePrice = $row['game_price']
+
+$gamePrice >= $wallet
+
+2. Odejmuje œrodki od konta
+$wallet = $wallet - $gamePrice
+
+UPDATE users SET user_wallet = $wallet WHERE UserID = $_SESSION['userID']
+to zapytanie powinno dzia³aæ 
+
+3. Wykonaj operacje przypisania gry do konta
+
+>nastêpnie dodawanie funduszy do konta
+>pod³¹czyæ pod to paypala XD/j
+>prawdopodobnie jest bardziej efektywniejsza wersja zrobienia tego

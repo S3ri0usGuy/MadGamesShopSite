@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+a{
+    color: whitesmoke;
+}
+body{
+    background-color: #1a3300;
+    color: whitesmoke;
+}
+.main{
+    width: 100%;
+    background-color: #1a3300;
+    margin: 0 auto;
+    padding: 20px;
+}
+#showcase_big_desc_div{
+    background-color: black;
+}
+#m_showcase_big{
+    background-color:	#446600;
+    width: 80%;
+    margin: 20px auto;
+}
+#showcase_big_pic{
+    width: 50%;
+    height: 80%;
+    border-radius: 16%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-self: center;
+    padding-top: 9px;
+    padding-bottom: 5px;
+}
+#showcase_big_title{
+    text-align: center;
+    color: black;
+}
+#showcase_big_desc{
+    float: right;
+    text-align: center;
+    color: whitesmoke;
+    padding-bottom: 4px;
+}
+#m_showcase_small{
+    background-color: #446600;
+    width: 77%;
+    padding: 28px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    height: 8%;
+    
+}
+.showcase_small{
+    background-color: #1b2902;
+    display: flex;
+    padding: 2px;
+    justify-content: space-between;
+    height: 72px;
+    width: 250px;
+}
+.showcase_small_pic{
+    width: 75px;
+    height: 75px;
+}
+.m_articles{
+    width: 75%;
+    height: 850px;
+    background-color: steelblue;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.articles_1{
+    width: 45%;
+    background-color: slateblue;
+}
+.articles_2{
+    width: 45%;
+    background-color: slateblue;
+}
+.article{
+    background-color: purple;
+    width: 80%;
+    height: 200px;
+    margin: 30px auto;
+    z-index: 1;
+}
+.article_title{
+    text-align: left;
+    padding: 5px;
+}
+.article_content{
+    text-align: right;
+    padding: 5px;
+
+}
+#header {
+    background-color: rgba(15, 13, 13, 0.418);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+#btn_edit{
+    display: block;
+    text-align: center;
+
+}
+.h_btn{
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid black;background-color: #446600; /* Green */
+    border: none;
+    color: white;
+    padding: 1px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    width: 63.1px;
+
+}
+.hdr_obj{ /* zamiast klasy mógłby być div*/
+    text-align: center;
+    background-color:  #446600;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 15px ;
+    padding-left: 15px ;
+    text-align: center;
+    width: 15%;
+    border: solid black;
+    color: whitesmoke;
+}
+.bnt_edit_small /*TODO*/
+{
+    width: 81px;
+    /* text-align: right; */
+}
+.bnt_edit_small .h_btn
+{
+    float: right;
+}
+.h_btn:hover {
+    background-color: rgba(22, 65, 14, 0.493);
+}
+.h_btn:active{
+    background-color: lawngreen;
+}
+#srch{
+    background-color: whitesmoke;
+    width: 50%;
+}
+#footer {
+    position: static;
+    bottom: 10px;
+    background-color: rgba(15, 13, 13, 0.418);;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: flex-end;
+}/* linijka 2 i 1 (w footer) do edycji w zależności od tego jaką stopkę będziemy potrzebowali i jeśli ma się przemieszczać*/
+.ftr_obj{
+    background-color: #446600;
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+
+}
+.f_ul {
+    list-style-type:none ;
+    padding-top: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: white;
+}
+.f_p{
+    display: flex;
+    align-self:center;
+    padding: 5px;
+    color: black;
+}
+#ck{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: static;
+    bottom: 0px;
+    background-color: rgba(15, 13, 13, 0.418);;
+}
+.search_resault{
+    background-color: #446600;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    width: 70%;
+    margin: 0 auto;
+    color: black;
+}
+.search_resault_pos{
+    background-color: #1b2902;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: whitesmoke;
+}
+.signup_form{
+    background-color: #1a3300;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    margin: 0 auto;
+    padding: 5px;
+    color: black;
+}
+.h_prfl{
+    background-color: #446600;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-flow: row;
+
+}
+.p_pfp{
+    background-color: #446600;
+    display: flex;
+    align-self: flex-start;
+    justify-self: flex-start;
+    padding: 30px 5px 5px 5px;
+    margin: 0px 70px 10px 70px;
+    width: 150px;
+}
+.pfp{
+    background-color: purple;
+    border: 3px solid black;
+    width: 150px;
+    height: 150px;
+}
+.p_nick{
+    align-self: center;
+}
+.nick{
+    font-size: 50px;
+}
+.p_btns{
+    position: absolute;
+    right: 15%;
+    padding: 30px 5px 5px 5px;
+
+}
+.p_btn{
+    background-color: transparent;
+    border: 2px solid black;
+}
+.p_btn:hover{
+    background-color: yellow;
+}
+.m_prfl{
+    background-color: #446600;
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 700px;
+}
+.p_games{
+    width: 100%;
+    margin: 0 auto;
+}
+.p_game{
+    background-color: #1b2902;
+    width: 50%;
+    margin: 0 auto;
+    height: 150px;
+    border-radius: 7%;
+    border: 40px;
+    
+}
+.game_pic{
+    text-transform: lowercase;
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.game_name{
+    text-transform: uppercase;
+    text-align: center;
+    padding: 30px;
+}
+
+.gamepage_up{
+    width: 90%;
+    margin: 0 auto;
+}
+#gamepage_baner{
+    width: 60%;
+    height: 450px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 15px;
+    border-radius: 20%;
+}
+.gamepage_info{
+    float: right;
+}
+.gamepage_info p {
+    text-align: center;
+}
+.obejma{
+    width: 70%;
+}
+/*#gamepage_name{
+
+}*/
+.gamebg{
+    width: 80%;
+    background-color: #446600;
+    display: block;
+    margin: 0 auto;
+}
+#gamepage_buy{
+    float: right;
+    color: black;
+}
+.gamepage_down{
+    width: 80%;
+    display: block;
+    text-align: center;
+    margin: 50px auto;
+}
+.gamepage_down p{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
