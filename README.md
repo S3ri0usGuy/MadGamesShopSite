@@ -1,5 +1,5 @@
 # MadGamesShopSite
-This a project of games store that sells digital version of games. It was done 2 years back so it is quite old and because of that there are featers that are lost to time but I am working on recovering them. 
+This a project of games store that sells digital version of games. It was done 2 years back so it is quite old and because of that there are featers that are lost to time but I am working on recovering them. The site is in polish and I left my txt files where I wrote out some functions also in in polish. 
 #Features:
 - account creation
 - buying games*
